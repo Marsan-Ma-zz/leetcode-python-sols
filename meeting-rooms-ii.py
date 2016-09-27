@@ -1,35 +1,57 @@
-# https://leetcode.com/problems/meeting-rooms/
+# https://leetcode.com/problems/meeting-rooms-ii/
 
-# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+# Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
 
 # For example,
 # Given [[0, 30],[5, 10],[15, 20]],
-# return false.
+# return 2.
 
 
-# Definition for an interval.
-# class Interval(object):
-#     def __init__(self, s=0, e=0):
-#         self.start = s
-#         self.end = e
+import heapq
 
 class Solution(object):
-    def canAttendMeetings(self, intervals):
+    def minMeetingRooms(self, intervals):
         """
         :type intervals: List[Interval]
-        :rtype: bool
-        
-        1. brute force: check whether intervals[i+1]..intervals[n] schedules envelope intervals[i]
-            => time complextity: O(n + n-1 + n-2 ...) = O(n^2)
-        2. sort according to start time, see if intervals[i+1].start_time < intervals[i].end_time
-            => time complextity: sort for O(nlogn), 1 pass check for O(n)
-        3. use space tradeoff for time: hashtable every 5 min to check if collition => time O(n) with space O(n)
+        :rtype: int
         """
-        times = sorted([(t.start, t.end) for t in intervals])
-        last_s, last_e = -1, -1
-        for s, e in times:
-            if (s < last_e):
-                return False
-            last_s, last_e = s, e
-        return True
         
+        # [Ideas]
+        # 1. might need some special data structure: tree? heap? n-stacks?
+        # 2. sort intervals by maybe start-time?
+        # 3. check: 
+        #      if overlap with last interval => into different group
+        #      if non-overlap => into one group
+        #      => a min-heap which each node is a group
+        #      => the min-heap sorting value is the group ending time
+        #      => if new interval begin-time < min in heap, 
+        #         append to heap-top group (update the heap-top)
+        # 4. it might have multiple suit group to insert, 
+        #    append to which one doesn't affect the result, 
+        #    since latter-interval-start always larger than current-start
+        
+        if not intervals: return 0
+        
+        intervals = sorted([(i.start, i.end) for i in intervals])
+        heap = [intervals[0][1]]
+        
+        for ts, te in intervals[1:]:
+            if ts >= heap[0]:
+                heapq.heapreplace(heap, te)
+            else: # ts < heap[0]
+                heapq.heappush(heap, te)
+                
+        return len(heap)
+    
+    def test(self):
+        cases = [
+            [],
+            [[0, 30],[5, 10],[15, 20]],
+            [[0, 30],[5, 15],[15, 20]],
+            [[0, 30],[5, 16],[15, 20]],
+        ]
+        for c in cases:
+            print(c, self.minMeetingRooms(c))
+            
+    
+# Solution().test()
