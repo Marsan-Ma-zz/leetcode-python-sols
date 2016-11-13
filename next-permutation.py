@@ -1,12 +1,15 @@
 # https://leetcode.com/problems/next-permutation/
 
-# Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+# Implement next permutation, which rearranges numbers into the 
+# lexicographically next greater permutation of numbers.
 
-# If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
+# If such arrangement is not possible, it must rearrange it as the 
+# lowest possible order (ie, sorted in ascending order).
 
 # The replacement must be in-place, do not allocate extra memory.
 
-# Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+# Here are some examples. Inputs are in the left-hand column and 
+# its corresponding outputs are in the right-hand column.
 # 1,2,3 → 1,3,2
 # 3,2,1 → 1,2,3
 # 1,1,5 → 1,5,1
@@ -28,7 +31,7 @@ class Solution(object):
         #    where swap (4,5) and cascade sorted(4,4,3)
         # 2. we don't need to really "sort" (4,4,3) which cost O(nlog(n))
         #    we just need to reverse it
-        # 3. [WARNING!!] a = a[::-1] CANNOT reverse a inplace! 
+        # 3. [WARNING!!] a = a[::-1] CANNOT reverse inplace! 
         #    since [:] spliting will create new list
         #    thus we need a reverse() func to do the trick.
         

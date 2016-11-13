@@ -1,8 +1,12 @@
 # https://leetcode.com/problems/logger-rate-limiter/
 
-# Design a logger system that receive stream of messages along with its timestamps, each message should be printed if and only if it is not printed in the last 10 seconds.
+# Design a logger system that receive stream of messages along 
+# with its timestamps, each message should be printed if and 
+# only if it is not printed in the last 10 seconds.
 
-# Given a message and a timestamp (in seconds granularity), return true if the message should be printed in the given timestamp, otherwise returns false.
+# Given a message and a timestamp (in seconds granularity), 
+# return true if the message should be printed in the given timestamp, 
+# otherwise returns false.
 
 # It is possible that several messages arrive roughly at the same time.
 
@@ -29,7 +33,24 @@
 # logger.shouldPrintMessage(11,"foo"); returns true;
 
 
+class Logger(object):
 
+    # [Ideas]
+    # store when it's ok for a message to be printed again
+
+    def __init__(self):
+        self.ok = {}
+
+    def shouldPrintMessage(self, timestamp, message):
+        if timestamp < self.ok.get(message, 0):
+            return False
+        self.ok[message] = timestamp + 10
+        return True
+
+
+
+
+# Key: Includes a last pointer to TTL old records
 class Logger(object):
 
     def __init__(self):

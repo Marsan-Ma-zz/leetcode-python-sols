@@ -1,12 +1,16 @@
 # https://leetcode.com/problems/graph-valid-tree/
 
-# Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+# Given n nodes labeled from 0 to n - 1 and a list of undirected edges 
+# (each edge is a pair of nodes), write a function to check whether 
+# these edges make up a valid tree.
 
 # For example:
 
 # Given n = 5 and edges = [[0, 1], [0, 2], [0, 3], [1, 4]], return true.
 
 # Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
+
+from collections import defaultdict
 
 class Solution(object):
     def validTree(self, n, edges):
@@ -23,16 +27,10 @@ class Solution(object):
         if n == 0: return False
         
         # construct connection map
-        conns = {}                           # n = 5 and edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
+        conns = defaultdict(list)   # n = 5 and edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
         for n1, n2 in edges:                 
-            if n1 in conns:
-                conns[n1].append(n2)
-            else:
-                conns[n1] = [n2]
-            if n2 in conns:
-                conns[n2].append(n1)
-            else:
-                conns[n2] = [n1]  
+            conns[n1].append(n2)
+            conns[n2].append(n1)
         # print(conns)                         # conns = {0: [1,2,3], 1:[0,4], 2:[0], 3:[0], 4:[1]} 
         
         # DFS

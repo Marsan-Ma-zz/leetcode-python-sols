@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/sort-transformed-array/
 
-# Given a sorted array of integers nums and integer values a, b and c. Apply a function of the form f(x) = ax2 + bx + c to each element x in the array.
+# Given a sorted array of integers nums and integer values a, b and c. 
+# Apply a function of the form f(x) = ax2 + bx + c to each element x in the array.
 
 # The returned array must be in sorted order.
 
@@ -14,6 +15,26 @@
 # nums = [-4, -2, 2, 4], a = -1, b = 3, c = 5
 
 # Result: [-23, -5, 1, 7]
+
+
+
+class Solution(object):
+    def sortTransformedArray(self, nums, a, b, c):
+
+        def f(x): return a*x*x + b*x + c
+            
+        res = []
+        low, high = 0, len(nums)-1
+        
+        while low <= high:
+            f_low, f_high = f(nums[low]), f(nums[high])
+            if (a > 0) ^ (f_low > f_high):
+                res.append(f_high)
+                high -= 1
+            else:
+                res.append(f_low)
+                low += 1
+        return res[::-1] if a > 0 else res
 
 
 class Solution(object):

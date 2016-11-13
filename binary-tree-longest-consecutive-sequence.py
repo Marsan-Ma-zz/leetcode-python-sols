@@ -3,7 +3,9 @@
 
 # Given a binary tree, find the length of the longest consecutive sequence path.
 
-# The path refers to any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The longest consecutive path need to be from parent to child (cannot be the reverse).
+# The path refers to any sequence of nodes from some starting node 
+# to any node in the tree along the parent-child connections. 
+# The longest consecutive path need to be from parent to child (cannot be the reverse).
 
 # For example,
 #    1
@@ -22,9 +24,7 @@
 #   / 
 #  1
 # Longest consecutive sequence path is 2-3,not3-2-1, so return 2.
-# Show Company Tags
-# Show Tags
-# Show Similar Problems
+
 
 # Definition for a binary tree node.
 # class TreeNode(object):

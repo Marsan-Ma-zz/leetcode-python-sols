@@ -6,12 +6,15 @@
 
 # v1 = [1, 2]
 # v2 = [3, 4, 5, 6]
-# By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1, 3, 2, 4, 5, 6].
+# By calling next repeatedly until hasNext returns false, 
+# the order of elements returned by next should be: [1, 3, 2, 4, 5, 6].
 
 # Follow up: What if you are given k 1d vectors? How well can your code be extended to such cases?
 
 # Clarification for the follow up question - Update (2015-09-18):
-# The "Zigzag" order is not clearly defined and is ambiguous for k > 2 cases. If "Zigzag" does not look right to you, replace "Zigzag" with "Cyclic". For example, given the following input:
+# The "Zigzag" order is not clearly defined and is ambiguous for k > 2 cases. 
+# If "Zigzag" does not look right to you, replace "Zigzag" with "Cyclic". 
+# For example, given the following input:
 
 # [1,2,3]
 # [4,5,6,7]

@@ -22,17 +22,10 @@ class Solution(object):
         
         # [Ideas]
         # record parents from root, along the way till target(p)
-        # if p has right-child => done
-        # if not => find parent => if through left branch, done
-        #                       => if through right branch, 
-        # --------------
-        # do in-order DFS (brute force), improve by:
-        # => if a node < p, search right branch only
-        # => if node > p, search left branch only
-        # => keep parents in stack, all the way
-        # when we get p => if have right child, return it
-        #               => if have no right child, 
-        #                  pop parents from stack until found larger than p
+        # if p has right-child => leftmost decendant in right branch
+        # if not => find parent 
+        #        => if through left branch, done
+        #        => if through right branch, find even upper parent until is left branch
         
         if not root: return None
         

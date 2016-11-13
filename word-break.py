@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/word-break/
+
 # Given a string s and a dictionary of words dict, 
 # determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 
@@ -6,6 +8,19 @@
 # dict = ["leet", "code"].
 
 # Return true because "leetcode" can be segmented as "leet code".
+
+
+# DP
+class Solution(object):
+    
+    def word_break(s, words):
+        d = [False] * len(s)    
+        for i in range(len(s)):
+            for w in words:
+                if w == s[i-len(w)+1:i+1] and (d[i-len(w)] or i-len(w) == -1):
+                    d[i] = True
+        return d[-1]
+
 
 
 class Solution(object):

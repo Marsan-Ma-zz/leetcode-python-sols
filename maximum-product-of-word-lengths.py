@@ -1,6 +1,9 @@
 # https://leetcode.com/problems/maximum-product-of-word-lengths/
 
-# Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.
+# Given a string array words, find the maximum value of 
+# length(word[i]) * length(word[j]) where the two words do not share 
+# common letters. You may assume that each word will contain only lower 
+# case letters. If no such two words exist, return 0.
 
 # Example 1:
 # Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
@@ -16,6 +19,18 @@
 # Given ["a", "aa", "aaa", "aaaa"]
 # Return 0
 # No such pair of words.
+
+
+# use bit filter to check words having same character
+class Solution(object):
+    def maxProduct(self, words):
+        d = {}
+        for w in words:
+            mask = 0
+            for c in set(w):
+                mask |= (1 << (ord(c) - 97))
+            d[mask] = max(d.get(mask, 0), len(w))
+        return max([d[x] * d[y] for x in d for y in d if not x & y] or [0])
 
 
 class Solution(object):

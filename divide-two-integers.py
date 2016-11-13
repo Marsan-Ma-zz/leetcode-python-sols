@@ -27,8 +27,8 @@ class Solution(object):
         
         # find start point
         while (B << 1) < A:
-                B = B << 1
-                mask = mask << 1
+            B = B << 1
+            mask = mask << 1
                 
         while A >= abs(divisor):
             # subtract the most B out of A

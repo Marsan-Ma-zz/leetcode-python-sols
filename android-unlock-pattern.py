@@ -1,11 +1,15 @@
 # https://leetcode.com/problems/android-unlock-patterns/
 
-# Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
+# Given an Android 3x3 key lock screen and two integers m and n, 
+# where 1 ≤ m ≤ n ≤ 9, count the total number of unlock patterns 
+# of the Android lock screen, which consist of minimum of m keys and maximum n keys.
 
 # Rules for a valid pattern:
 # Each pattern must connect at least m keys and at most n keys.
 # All the keys must be distinct.
-# If the line connecting two consecutive keys in the pattern passes through any other keys, the other keys must have previously selected in the pattern. No jumps through non selected key is allowed.
+# If the line connecting two consecutive keys in the pattern 
+# passes through any other keys, the other keys must have previously 
+# selected in the pattern. No jumps through non selected key is allowed.
 # The order of keys used matters.
 
 # Explanation:
@@ -50,7 +54,7 @@ class Solution(object):
         #------------------------------------------
         # 1. we could regard crossing duplicate grid as edge without weight
         #    since crossing some other node have unique destiny:
-        #    ex: 123, 150, 258, only these 3 kinds.
+        #    ex: 123, 159, 258, only these 3 kinds.
         # 2. we use DFS to traverse all solutions.
         # 3. we only traverse from 1, 2, 5, since others are symmetrics.
         #    and multiply solutions from 1,2 by 4 times

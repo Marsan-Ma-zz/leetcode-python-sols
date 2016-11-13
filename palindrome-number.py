@@ -3,24 +3,27 @@
 # Determine whether an integer is a palindrome. Do this without extra space.
 
 
+
 from math import log, floor
 class Solution(object):
     def isPalindrome(self, x):
-        """
-        :type x: int
-        :rtype: bool
-        """
-        
-        # [Ideas] WITHOUT extra spaces!
-        # 1. detect num of digit of x 
-        # => compare from MSB and LSB, 
-        # => then remove them by substraction and divide by 10
-        # 
-        
-        if not x: return True
-        if x < 0: return False 
-        return str(x) == str(x)[::-1]
-        
+        if abs(x) > 0x7FFFFFFF:
+            return False
+        elif x < 0:
+            return False
+
+        exp = 1
+        while x / (10 ** exp) != 0:
+            exp += 1
+        exp -= 1
+
+        while exp > 0:
+            if x / (10 ** exp) != x % 10:
+                return False
+            x = x % (10 ** exp)
+            x = x / 10
+            exp -= 2
+        return True
         
     def test(self):
         cases = [
