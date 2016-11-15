@@ -1,4 +1,4 @@
-## Inspiring
+## [Inspiring]
 
 combination-sum-iv
 contains-duplicate-ii
@@ -47,11 +47,12 @@ word-ladder
 word-break
 
 
-## Tricky
+## [Tricky]
 palindrome-number
+reverse-nodes-in-k-group
 
 
-## Hard
+## [Hard]
 game-of-life
 largest-divisible-subset
 maximal-rectangle
@@ -59,3 +60,6 @@ maximal-square
 regular-expression-matching
 remove-invalid-parentheses
 utf-8-validation
+paint-house-ii
+wildcard-matching
+alien-dictionary

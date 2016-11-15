@@ -20,6 +20,29 @@
 # isMatch("aab", "c*a*b") → true
 
 class Solution(object):
+
+    # time: O(m*n)
+    # space: O(n)
+    def isMatch(self, s, p):
+        k = 2
+        dp = [ [False for i in xrange(len(p)+1)] for j in xrange(k) ]
+        dp[0][0] = True
+        for i in xrange(2, len(p)+1):
+            if p[i-1] == '*':
+                dp[0][i] = dp[0][i-2]
+        for i in xrange(1, len(s)+1):
+            if i > 1:
+                dp[0][0] = False
+            for j in xrange(1, len(p)+1):
+                if p[j-1] == '*':
+                    dp[i%k][j] = dp[i%k][j-2] or (dp[(i-1)%k][j] and (s[i-1]==p[j-2] or p[j-2] == '.'))
+                else:
+                    dp[i%k][j] = dp[(i-1)%k][j-1] and (s[i-1] == p[j-1] or p[j-1] == '.')
+        return dp[len(s)%k][len(p)]
+
+
+    # time: O(m*n)
+    # space: O(m*n)
     def isMatch(self, s, p):
         """
         :type s: str
@@ -44,7 +67,8 @@ class Solution(object):
         #------------------------------------------
         # 1. use dynamic programming, boolean table[p][s] as match or not
         # 2. table size is len(p)+1 * len(s)+1 where table[0][0] is empty pairs ('', '')
-        
+        # 3. table size could be reduced to 2 row!!
+
         table = [[False] * (len(s) + 1) for _ in range(len(p) + 1)]
         table[0][0] = True
 
