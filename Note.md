@@ -45,11 +45,13 @@ verify-preorder-serialization-of-a-binary-tree
 walls-and-gates
 word-ladder
 word-break
+find-median-from-data-stream
 
 
 ## [Tricky]
 palindrome-number
 reverse-nodes-in-k-group
+perfect-rectangle
 
 
 ## [Hard]
@@ -63,3 +65,5 @@ utf-8-validation
 paint-house-ii
 wildcard-matching
 alien-dictionary
+pacific-atlantic-water-flow
+ugly-number-ii
