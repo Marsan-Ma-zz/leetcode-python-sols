@@ -46,6 +46,10 @@ walls-and-gates
 word-ladder
 word-break
 find-median-from-data-stream
+sort-list
+trapping-rain-water
+max-points-on-a-line
+bulb-switcher
 
 
 ## [Tricky]
