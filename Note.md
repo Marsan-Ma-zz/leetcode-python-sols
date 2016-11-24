@@ -50,6 +50,7 @@ sort-list
 trapping-rain-water
 max-points-on-a-line
 bulb-switcher
+find-all-numbers-disappeared-in-an-array
 
 
 ## [Tricky]
