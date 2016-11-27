@@ -20,6 +20,9 @@
 # s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 
 
+# [Python regex]
+# https://docs.python.org/3/library/re.html
+
 # regex
 import re
 class Solution(object):

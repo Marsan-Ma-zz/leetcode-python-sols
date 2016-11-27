@@ -12,6 +12,7 @@ class Solution:
             return x * self.myPow(x, n-1)
         return self.myPow(x*x, n/2)
         
+        
 # class Solution(object):
 #     def myPow(self, x, n):
 #         """

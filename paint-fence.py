@@ -17,6 +17,11 @@ class Solution(object):
         :rtype: int
         """
         
+        # sol[n] = (sol[n-1] - k) * k + k * (k-1) 
+        #        = k * (sol[n-1] - k + k - 1)
+        #        = k * (sol[n-1] - 1)
+        #        = k * sol[n-1] - k
+
         # [Ideas]
         # 1. dynamic programming, sol[n] = sol[n-1] * k - k
         # 2. Ex: sol = [0, k, k*k, k*k*k - k, ...]

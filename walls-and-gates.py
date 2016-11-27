@@ -30,6 +30,7 @@ class Solution(object):
 
 
     # very tricky sol
+    # do BFS, and do it from all gates. use queue to append new nodes
     def wallsAndGates(self, rooms):
         q = [(i, j) for i, row in enumerate(rooms) for j, r in enumerate(row) if not r]
         for i, j in q:
@@ -47,6 +48,7 @@ class Solution(object):
 
         1. from all gates, do DFS and update accesible nodes. time: O(m*n)
             a. stop if -1, or value to update > existing number
+
         """
         # 0. boundary case
         if (len(rooms) == 0) or (len(rooms[0]) == 0):

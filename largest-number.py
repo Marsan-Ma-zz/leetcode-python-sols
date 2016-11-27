@@ -7,7 +7,13 @@
 # Note: The result may be very large, so you need to return a string instead of an integer.
 
 
-
+# [3, 30, 34, 31, 32, 312, 345, 334] => 345, 
+# [3, 32, 33, 34, 334]
+# 1. compare 2nd MSB?  => what if no 2nd MSB ones?
+# 2. for no 2nd MSB ones, append trailing same number?
+#    => [333, 323, 333, 343, 334] 
+#    => brute force: compare each pair combination
+#       3+32, 3+33, 3+34, 3+334, 32+3, 32+33, 32+34, 32+334, ...
 
 from functools import cmp_to_key
 

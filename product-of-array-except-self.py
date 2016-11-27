@@ -15,10 +15,14 @@
 
 
 
+
 # multiply toward right, then toward left
+#       1   1    1      1
+# ->        1   1*2   1*2*3 
+# <-  2*3*4 3*4   4
+
 class Solution:
-    # @param {integer[]} nums
-    # @return {integer[]}
+    
     def productExceptSelf(self, nums):
         p = 1
         n = len(nums)

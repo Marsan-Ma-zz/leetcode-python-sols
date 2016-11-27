@@ -37,6 +37,8 @@ class Solution(object):
         nums.sort()
         s = [(1, [nums[0]])]# base case, [size, elements]
         for i in range(1, l):
+            # every time, try all existing largestDivisibleSubset ended in 0 to i-1,
+            # to form the largestDivisibleSubset ended in i
             ms = max([s[j] for j in range(i) if nums[i] % nums[j] == 0] or [(0, [])], key = lambda x:x[0]) 
             s.append((ms[0] + 1, ms[1] + [nums[i]]))
         return max(s, key = lambda x:x[0])[1]

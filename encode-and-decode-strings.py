@@ -15,6 +15,7 @@
 #   //... your code
 #   return strs;
 # }
+
 # So Machine 1 does:
 
 # string encoded_string = encode(strs);
