@@ -27,6 +27,11 @@ trapping-rain-water
 bulb-switcher
 range-sum-query-2d-mutable
 palindrome-number
+integer-replacement
+min-stack
+power-of-two
+spiral-matrix
+
 
 ## [Inspiring - Normal]
 combination-sum-iv
@@ -62,6 +67,7 @@ sort-list
 reverse-nodes-in-k-group
 game-of-life
 utf-8-validation
+clone-graph
 
 
 ## [Inspiring - Hard]
@@ -72,6 +78,8 @@ maximal-square
 regular-expression-matching
 remove-invalid-parentheses
 number-of-islands-ii
+best-time-to-buy-and-sell-stock-with-cooldown
+
 
 
 wildcard-matching
@@ -84,45 +92,30 @@ minimum-unique-word-abbreviation
 
 
 ----news for google----
-shortest-distance-from-all-buildings.py
-trapping-rain-water-ii.py
-longest-substring-with-at-most-two-distinct-characters.py
-longest-increasing-path-in-a-matrix.py
 basic-calculator.py
-best-time-to-buy-and-sell-stock-with-cooldown.py
-binary-tree-paths.py
 burst-balloons.py
-clone-graph.py
 closest-binary-search-tree-value-ii.py
 count-of-range-sum.py
 count-of-smaller-numbers-after-self.py
 create-maximum-number.py
-dian-of-two-sorted-arrays.py
 expression-add-operators.py
-find-peak-element.py
-flip-game.py
-generate-parentheses.py
 guess-number-higher-or-lower-ii.py
-implement-trie-(prefix-tree).py
-integer-replacement.py
 kth-smallest-element-in-a-bst.py
 lfu-cache.py
+longest-increasing-path-in-a-matrix.py
+longest-substring-with-at-most-two-distinct-characters.py
 max-sum-of-rectangle-no-larger-than-k.py
 maximum-xor-of-two-numbers-in-an-array.py
-min-stack.py
 minimum-height-trees.py
 optimal-account-balancing.py
 palindrome-pairs.py
-palindrome-permutation.py
 patching-array.py
-power-of-two.py
 rearrange-string-k-distance-apart.py
 remove-duplicate-letters.py
 russian-doll-envelopes.py
+shortest-distance-from-all-buildings.py
 shortest-palindrome.py
 sliding-window-maximum.py
-smallest-rectangle-enclosing-black-pixels.py
-spiral-matrix.py
+trapping-rain-water-ii.py
 word-break-ii.py
 word-search-ii.py
-
