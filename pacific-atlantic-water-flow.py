@@ -61,7 +61,7 @@ class Solution(object):
         # 3. take their intersection as answer, plus 2 always True point
         # 4. expand solutions with its neighbors with same height.
         # ------------------------------------------------------------
-        # 1. do dfs from all coastal nodes 
+        # 1. do BFS from all coastal nodes 
         # 2. find pacific reach, find atalantic reach, find intersection
         
         if not matrix or not matrix[0]: return []

@@ -24,7 +24,11 @@ class Solution(object):
         """
         
         # [Ideas]
-        # 1. bi-direction BFS
+        # Single source shortest path => (BFS, Dijkstra's, A*)
+        # => all edge in same weight, Dijkstra's = BFS
+        # => no good estimate distance, A* not guarantee to be good
+        # => so, BFS
+        # => improve: bi-direction BFS
         
         ans = 1
         grp1, grp2 = {beginWord}, {endWord}

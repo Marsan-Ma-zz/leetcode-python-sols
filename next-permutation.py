@@ -16,47 +16,73 @@
 
 
 class Solution(object):
+
     def nextPermutation(self, nums):
         """
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        
-        if not nums: return
-        
-        # [Ideas]
-        # 1. nextPermutation means to pivot by the first decending point
-        #    1,2,3,4,5,3,2 => 1,2,3,5,2,3,4
-        #          ~~~~~~~          ~~~~~~~
-        #    where swap (4,5) and cascade sorted(4,4,3)
-        # 2. we don't need to really "sort" (4,4,3) which cost O(nlog(n))
-        #    we just need to reverse it
-        # 3. [WARNING!!] a = a[::-1] CANNOT reverse inplace! 
-        #    since [:] spliting will create new list
-        #    thus we need a reverse() func to do the trick.
-        
-        
-        # find pivot point
-        l = len(nums)
-        for j in range(1, l):  # 1 to l-1
-            i = l-1-j  # l-2 to 0
-            if nums[i] < nums[i+1]:
-                # find smallest d among nums[i+1:] which > nums[i]
-                next_lead = i+1
-                while next_lead < l-1:
-                    if nums[next_lead+1] > nums[i]:
-                        next_lead += 1
-                    else:
-                        break
-                nums[i], nums[next_lead] = nums[next_lead], nums[i] # swap
-                
-                # reverse rest
-                self.reverse(nums, start=i+1) #nums[i+1:][::-1]
-                return
-            
-        self.reverse(nums) #nums[::-1]
+        # find the rightmost digit with ascending order
+        i = len(nums)-1
+        while i > 0 and nums[i-1] >= nums[i]:
+            i -= 1
+        # find the right most digit greater than nums[i-1]
+        if i > 0:
+            j = len(nums)-1
+            while nums[j] <= nums[i-1]:
+                j -= 1
+            nums[i-1], nums[j] = nums[j], nums[i-1]
+        # reverse the list from ith to end
+        j = len(nums) - 1
+        while i < j:
+            nums[i], nums[j] = nums[j], nums[i]
+            i += 1
+            j -= 1 
         return
-        # print(nums)
+
+
+
+    # def nextPermutation(self, nums):
+    #     """
+    #     :type nums: List[int]
+    #     :rtype: void Do not return anything, modify nums in-place instead.
+    #     """
+        
+    #     if not nums: return
+        
+    #     # [Ideas]
+    #     # 1. nextPermutation means to pivot by the first decending point
+    #     #    1,2,3,4,5,3,2 => 1,2,3,5,2,3,4
+    #     #          ~~~~~~~          ~~~~~~~
+    #     #    where swap (4,5) and cascade sorted(4,4,3)
+    #     # 2. we don't need to really "sort" (4,4,3) which cost O(nlog(n))
+    #     #    we just need to reverse it
+    #     # 3. [WARNING!!] a = a[::-1] CANNOT reverse inplace! 
+    #     #    since [:] spliting will create new list
+    #     #    thus we need a reverse() func to do the trick.
+        
+        
+    #     # find pivot point
+    #     l = len(nums)
+    #     for j in range(1, l):  # 1 to l-1
+    #         i = l-1-j  # l-2 to 0
+    #         if nums[i] < nums[i+1]:
+    #             # find smallest d among nums[i+1:] which > nums[i]
+    #             next_lead = i+1
+    #             while next_lead < l-1:
+    #                 if nums[next_lead+1] > nums[i]:
+    #                     next_lead += 1
+    #                 else:
+    #                     break
+    #             nums[i], nums[next_lead] = nums[next_lead], nums[i] # swap
+                
+    #             # reverse rest
+    #             self.reverse(nums, start=i+1) #nums[i+1:][::-1]
+    #             return
+            
+    #     self.reverse(nums) #nums[::-1]
+    #     return
+    #     # print(nums)
     
     # inplace reverse list
     def reverse(self, nn, start=0):

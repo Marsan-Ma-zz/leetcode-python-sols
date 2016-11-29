@@ -10,6 +10,28 @@
 
 
 class Solution(object):
+
+
+    # [general solution for k-distinct-characters]
+    # (https://discuss.leetcode.com/topic/37487/general-k-distinct-characters-solution-in-python)
+    # The main idea is that using OrderedDict to save the last index current char appeared, 
+    # and make the index in the OrderedDict ascendingly. When the length of OrderedDict is 
+    # larger than K, move start to OrderedDict.first.val + 1 and remove OrderedDict.first.
+
+    def lengthOfLongestSubstringTwoDistinct(self, s, k=2):
+        queue, start, sol = OrderedDict(), 0, 0
+
+        for i, char in enumerate(s):
+            if char in queue:
+                queue.pop(char)
+            queue[char] = i
+
+            if len(queue) > k:
+                start = queue.popitem(False)[1] + 1
+            sol = max(sol, i - start + 1)
+        return sol
+
+
     def lengthOfLongestSubstringKDistinct(self, s, k):
         """
         :type s: str
@@ -34,6 +56,9 @@ class Solution(object):
         #       then sol = position of this char - 1 => done in O(1)
         #       since just table lookup.
         
+        # [Key]: not finding last k char, but finding latest k+1 char,
+        #        which make sequence stop!
+
         tbl = {}
         queue = []
         sol = 0

@@ -32,7 +32,7 @@ class Solution(object):
         # find h_idx
         h_idx = 0
         total_cites = 0
-        for i in reversed(range(max_cite+1)):         # [i]: 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0
+        for i in reversed(range(max_cite+1)):        # [i]: 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0
             if i in cites:                           # [total_cites]: 
                 total_cites += cites[i]              #      1 -> 2 -> 2 -> 3 -> 3 -> 4 -> 5
             if total_cites >= i:
