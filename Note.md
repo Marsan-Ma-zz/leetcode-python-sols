@@ -53,6 +53,8 @@ remove-k-digits
 sort-transformed-array
 walls-and-gates
 path-sum-iii
+battleships-in-a-board
+find-leaves-of-binary-tree
 
 
 ## [Need Careful Implement]
@@ -89,6 +91,15 @@ remove-invalid-parentheses
 ugly-number-ii
 *wildcard-matching
 word-ladder
+
+
+count-of-smaller-numbers-after-self
+range-sum-query-mutable
+the-skyline-problem
+trapping-rain-water-ii
+longest-increasing-path-in-a-matrix
+sliding-window-maximum
+word-search-ii
 
 
 ----news for google----

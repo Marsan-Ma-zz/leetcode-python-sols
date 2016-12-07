@@ -29,7 +29,7 @@ class Solution(object):
     
     # -----[Reservoir Sampling]----------
     # with probability 1/i, keep the new item (discard the old one)
-    # with probability 1-1/i, keep the old item (ignore the new one)
+    # with probability 1-(1/i), keep the old item (ignore the new one)
     def __init__(self, nums):
         self.l = nums
 
