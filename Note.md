@@ -91,6 +91,7 @@ remove-invalid-parentheses
 ugly-number-ii
 *wildcard-matching
 word-ladder
+*count-of-range-sum
 
 
 count-of-smaller-numbers-after-self
@@ -100,32 +101,26 @@ trapping-rain-water-ii
 longest-increasing-path-in-a-matrix
 sliding-window-maximum
 word-search-ii
+maximum-xor-of-two-numbers-in-an-array
+burst-balloons
+shortest-distance-from-all-buildings
+rearrange-string-k-distance-apart
+basic-calculator
+palindrome-pairs
+shortest-palindrome
+word-break-ii
 
 
 ----news for google----
-basic-calculator.py
-burst-balloons.py
 closest-binary-search-tree-value-ii.py
-count-of-range-sum.py
-count-of-smaller-numbers-after-self.py
 create-maximum-number.py
 expression-add-operators.py
 guess-number-higher-or-lower-ii.py
 kth-smallest-element-in-a-bst.py
 lfu-cache.py
-longest-increasing-path-in-a-matrix.py
 max-sum-of-rectangle-no-larger-than-k.py
-maximum-xor-of-two-numbers-in-an-array.py
 minimum-height-trees.py
 optimal-account-balancing.py
-palindrome-pairs.py
 patching-array.py
-rearrange-string-k-distance-apart.py
 remove-duplicate-letters.py
 russian-doll-envelopes.py
-shortest-distance-from-all-buildings.py
-shortest-palindrome.py
-sliding-window-maximum.py
-trapping-rain-water-ii.py
-word-break-ii.py
-word-search-ii.py
