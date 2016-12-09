@@ -11,18 +11,15 @@ insert-interval
 integer-replacement
 largest-rectangle-in-histogram  
 longest-consecutive-sequence
-maximum-size-subarray-sum-equals-k
 min-stack
 paint-fence
 palindrome-number
 perfect-squares
 plus-one-linked-list
-power-of-four
 power-of-three
 power-of-two
 random-pick-index
 range-addition
-range-sum-query-2d-mutable
 remove-nth-node-from-end-of-list
 spiral-matrix
 sqrtx
@@ -35,26 +32,29 @@ word-break
 
 
 ## [Inspiring - Normal]
+battleships-in-a-board
 combination-sum-iv
 course-schedule-ii
 decode-string
 find-all-numbers-disappeared-in-an-array
+find-leaves-of-binary-tree
 find-median-from-data-stream
 kth-largest-element-in-an-array
 kth-smallest-element-in-a-sorted-matrix
 largest-number
 max-points-on-a-line
 maximum-product-of-word-lengths
+maximum-size-subarray-sum-equals-k
 paint-house-ii
 perfect-rectangle
+power-of-four
 product-of-array-except-self
 queue-reconstruction-by-height
+range-sum-query-2d-mutable
 remove-k-digits
 sort-transformed-array
 walls-and-gates
-path-sum-iii
-battleships-in-a-board
-find-leaves-of-binary-tree
+
 
 
 ## [Need Careful Implement]
@@ -86,6 +86,7 @@ minimum-height-trees
 *minimum-unique-word-abbreviation
 number-of-islands-ii
 pacific-atlantic-water-flow
+path-sum-iii
 *regular-expression-matching
 remove-invalid-parentheses
 ugly-number-ii
@@ -109,18 +110,20 @@ basic-calculator
 palindrome-pairs
 shortest-palindrome
 word-break-ii
+guess-number-higher-or-lower-ii
+longest-increasing-subsequence
+russian-doll-envelopes
+create-maximum-number
+patching-array
+
 
 
 ----news for google----
 closest-binary-search-tree-value-ii.py
-create-maximum-number.py
 expression-add-operators.py
-guess-number-higher-or-lower-ii.py
 kth-smallest-element-in-a-bst.py
 lfu-cache.py
 max-sum-of-rectangle-no-larger-than-k.py
 minimum-height-trees.py
 optimal-account-balancing.py
-patching-array.py
 remove-duplicate-letters.py
-russian-doll-envelopes.py

@@ -18,6 +18,14 @@ class Solution:
         # f(0) = nums[0]
         # f(1) = max(num[0], num[1])
         # f(k) = max( f(k-2) + nums[k], f(k-1) )
+        #-------------------------------------------
+        # 1. because f(k) will always >= f(k-1), no matter rob k or not
+        # 2. if rob current house f(i) = f(i-2) + nums[i]
+        #    => if f(i-1) rob, we can't add from that
+        #    => if f(i-1) didn't rob, f(i-1) == f(i-2)
+        #    => thus, f(i) with rob always been f(i-2) + nums[i]
+        # 3. if not rob current house, f(i) = f(i-1)
+        # 4. so, f(i) = max( f(i-2) + nums[i], f(i-1) )
 
         last, now = 0, 0
         for i in nums: last, now = now, max(last + i, now)

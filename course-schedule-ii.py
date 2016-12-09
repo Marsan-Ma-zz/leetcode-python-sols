@@ -38,6 +38,10 @@ class Solution(object):
         1. build graph info, include "visited" & "edge with direct" 
         2. start from unvisited vertex, do dfs visit, stop if next vertex visited.
         3. Ex: [4, [[1,0],[2,0],[3,1],[3,2]]]. start from 0: 0 -> (1, 2) -> (3, 3) 
+        # -----------------------
+        1. start from "free" (have no prerequiste course) courses to traverse.
+        2. if all courses visited, done.
+        3. if no free courses, but some courses not visited, return []
         """
         
         # [visit status] 0: unvisited, 1: visited, 2: visiting, if visit again in this loop means cycle!
