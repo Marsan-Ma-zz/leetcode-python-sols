@@ -1,4 +1,5 @@
 ## [Inspiring - Easy]
+best-time-to-buy-and-sell-stock-iii
 bulb-switcher
 contains-duplicate-ii
 encode-and-decode-strings
@@ -33,7 +34,9 @@ word-break
 
 ## [Inspiring - Normal]
 battleships-in-a-board
+closest-binary-search-tree-value-ii.py
 combination-sum-iv
+convex-polygon
 course-schedule-ii
 decode-string
 find-all-numbers-disappeared-in-an-array
@@ -42,6 +45,7 @@ find-median-from-data-stream
 kth-largest-element-in-an-array
 kth-smallest-element-in-a-sorted-matrix
 largest-number
+lru-cache
 max-points-on-a-line
 maximum-product-of-word-lengths
 maximum-size-subarray-sum-equals-k
@@ -115,15 +119,13 @@ longest-increasing-subsequence
 russian-doll-envelopes
 create-maximum-number
 patching-array
-
+expression-add-operators
+remove-duplicate-letters
+max-sum-of-sub-matrix-no-larger-than-k
+best-time-to-buy-and-sell-stock-iv
 
 
 ----news for google----
-closest-binary-search-tree-value-ii.py
-expression-add-operators.py
-kth-smallest-element-in-a-bst.py
-lfu-cache.py
-max-sum-of-rectangle-no-larger-than-k.py
-minimum-height-trees.py
-optimal-account-balancing.py
-remove-duplicate-letters.py
+lfu-cache.py  (my sol is better, O(1) sol too tricky)
+optimal-account-balancing.py  (no good sol yet)
+
