@@ -5,7 +5,7 @@ contains-duplicate-ii
 encode-and-decode-strings
 group-shifted-strings
 h-index-ii
-house-robber
+house-robber-ii
 increasing-triplet-subsequence
 inorder-successor-in-bst
 insert-interval
@@ -30,6 +30,10 @@ trapping-rain-water
 valid-parentheses
 verify-preorder-serialization-of-a-binary-tree
 word-break
+longest-valid-parentheses
+arithmetic-slices
+unique-binary-search-trees-ii
+palindrome-partitioning
 
 
 ## [Inspiring - Normal]
@@ -58,6 +62,9 @@ range-sum-query-2d-mutable
 remove-k-digits
 sort-transformed-array
 walls-and-gates
+integer-break
+dungeon-game
+palindrome-partitioning-ii
 
 
 
@@ -76,6 +83,10 @@ reverse-nodes-in-k-group
 sort-list
 sum-of-two-integers
 utf-8-validation
+coin-change
+distinct-subsequences
+interleaving-string
+
 
 
 ## [Inspiring - Hard]
@@ -97,6 +108,7 @@ ugly-number-ii
 *wildcard-matching
 word-ladder
 *count-of-range-sum
+
 
 
 count-of-smaller-numbers-after-self
@@ -123,6 +135,8 @@ expression-add-operators
 remove-duplicate-letters
 max-sum-of-sub-matrix-no-larger-than-k
 best-time-to-buy-and-sell-stock-iv
+edit-distance
+scramble-string
 
 
 ----news for google----
