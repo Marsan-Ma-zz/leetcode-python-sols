@@ -13,7 +13,11 @@
 # Return 3.
 # The three ranges are : [0, 0], [2, 2], [0, 2] and their respective sums are: -2, -1, 2.
 
-
+# [Ideas]
+# 1. if target is a number rather than range, it's just 2sum problem.
+# 2. since target is a range, use binary-search to get range.
+# 3. use BITree to keep current available numbers count during traverse, 
+#    then find target range counts from BITree
 
 # https://discuss.leetcode.com/topic/34208/o-nlogn-python-solution-binary-indexed-tree-268-ms
 def countRangeSum(self, nums, lower, upper):

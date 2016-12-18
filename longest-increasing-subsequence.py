@@ -17,6 +17,12 @@ from bisect import *
 
 class Solution(object):
 
+
+    # [Ideas]
+    # 1. doing something like insertion sort, but:
+    #    => instead of insertion, do "replace"
+    #    => use binary search to make searching log(n) per time.
+    #
     # [10, inf, inf, inf, inf, inf, inf, inf, inf] 
     # [9, inf, inf, inf, inf, inf, inf, inf, inf] 
     # [2, inf, inf, inf, inf, inf, inf, inf, inf] 

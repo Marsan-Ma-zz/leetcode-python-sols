@@ -70,6 +70,7 @@ class Solution(object):
         #    collect key-points in the same time
         
         
+        # adding right node for checking "falling to lower places"!
         nodes = buildings + [[r, None, None] for l, r, h in buildings]
         nodes = sorted(nodes, key=lambda v: v[0])
         

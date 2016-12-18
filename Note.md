@@ -1,4 +1,5 @@
 ## [Inspiring - Easy]
+arithmetic-slices
 best-time-to-buy-and-sell-stock-iii
 bulb-switcher
 contains-duplicate-ii
@@ -10,11 +11,13 @@ increasing-triplet-subsequence
 inorder-successor-in-bst
 insert-interval
 integer-replacement
-largest-rectangle-in-histogram  
+largest-rectangle-in-histogram
 longest-consecutive-sequence
+longest-valid-parentheses
 min-stack
 paint-fence
 palindrome-number
+palindrome-partitioning
 perfect-squares
 plus-one-linked-list
 power-of-three
@@ -27,13 +30,11 @@ sqrtx
 strobogrammatic-number-ii
 subsets-ii
 trapping-rain-water
+unique-binary-search-trees-ii
 valid-parentheses
 verify-preorder-serialization-of-a-binary-tree
 word-break
-longest-valid-parentheses
-arithmetic-slices
-unique-binary-search-trees-ii
-palindrome-partitioning
+total-hamming-distance
 
 
 ## [Inspiring - Normal]
@@ -43,9 +44,11 @@ combination-sum-iv
 convex-polygon
 course-schedule-ii
 decode-string
+dungeon-game
 find-all-numbers-disappeared-in-an-array
 find-leaves-of-binary-tree
 find-median-from-data-stream
+integer-break
 kth-largest-element-in-an-array
 kth-smallest-element-in-a-sorted-matrix
 largest-number
@@ -53,7 +56,9 @@ lru-cache
 max-points-on-a-line
 maximum-product-of-word-lengths
 maximum-size-subarray-sum-equals-k
+ones-and-zeroes
 paint-house-ii
+palindrome-partitioning-ii
 perfect-rectangle
 power-of-four
 product-of-array-except-self
@@ -62,18 +67,19 @@ range-sum-query-2d-mutable
 remove-k-digits
 sort-transformed-array
 walls-and-gates
-integer-break
-dungeon-game
-palindrome-partitioning-ii
-
+insert-delete-getrandom-o1-duplicates-allowed
+design-twitter
 
 
 ## [Need Careful Implement]
 clone-graph
+coin-change
+distinct-subsequences
 divide-two-integers
 fraction-to-recurring-decimal
 game-of-life
 implement-trie-prefix-tree
+interleaving-string
 logger-rate-limiter
 next-permutation
 powx-n
@@ -83,63 +89,58 @@ reverse-nodes-in-k-group
 sort-list
 sum-of-two-integers
 utf-8-validation
-coin-change
-distinct-subsequences
-interleaving-string
 
 
 
 ## [Inspiring - Hard]
+*count-of-range-sum
+*median-of-two-sorted-arrays
+*minimum-unique-word-abbreviation
+*regular-expression-matching
+*wildcard-matching
+*max-sum-of-sub-matrix-no-larger-than-k
+*encode-string-with-shortest-length
 alien-dictionary
+basic-calculator
+best-time-to-buy-and-sell-stock-iv
 best-time-to-buy-and-sell-stock-with-cooldown
+burst-balloons
+count-of-smaller-numbers-after-self
+create-maximum-number
+edit-distance
+expression-add-operators
+guess-number-higher-or-lower-ii
 largest-divisible-subset
+lfu-cache
+longest-increasing-path-in-a-matrix
+longest-increasing-subsequence
 longest-substring-with-at-most-k-distinct-characters
 maximal-rectangle
 maximal-square
-*median-of-two-sorted-arrays
+maximum-xor-of-two-numbers-in-an-array
 minimum-height-trees
-*minimum-unique-word-abbreviation
 number-of-islands-ii
 pacific-atlantic-water-flow
+palindrome-pairs
+patching-array
 path-sum-iii
-*regular-expression-matching
-remove-invalid-parentheses
-ugly-number-ii
-*wildcard-matching
-word-ladder
-*count-of-range-sum
-
-
-
-count-of-smaller-numbers-after-self
 range-sum-query-mutable
+rearrange-string-k-distance-apart
+remove-duplicate-letters
+remove-invalid-parentheses
+russian-doll-envelopes
+scramble-string
+shortest-distance-from-all-buildings
+shortest-palindrome
+sliding-window-maximum
 the-skyline-problem
 trapping-rain-water-ii
-longest-increasing-path-in-a-matrix
-sliding-window-maximum
-word-search-ii
-maximum-xor-of-two-numbers-in-an-array
-burst-balloons
-shortest-distance-from-all-buildings
-rearrange-string-k-distance-apart
-basic-calculator
-palindrome-pairs
-shortest-palindrome
+ugly-number-ii
 word-break-ii
-guess-number-higher-or-lower-ii
-longest-increasing-subsequence
-russian-doll-envelopes
-create-maximum-number
-patching-array
-expression-add-operators
-remove-duplicate-letters
-max-sum-of-sub-matrix-no-larger-than-k
-best-time-to-buy-and-sell-stock-iv
-edit-distance
-scramble-string
+word-ladder
+word-search-ii
 
 
 ----news for google----
-lfu-cache.py  (my sol is better, O(1) sol too tricky)
 optimal-account-balancing.py  (no good sol yet)
 

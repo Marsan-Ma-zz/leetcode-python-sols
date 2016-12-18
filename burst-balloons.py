@@ -32,7 +32,8 @@ class Solution(object):
         """
         
         # [Ideas]
-        # 1. for continuous segment from m to n, suppose last burst is i
+        # 1. for continuous segment from m to n, suppose "last burst" is i
+        #    (or, imagine we are "creating" rather than "burst" baloon)
         #    then dp[m][n] = dp[m][i-1] + dp[i+1][n] + m*i*n
         #    Note: we do NOT burst m and n in this segment
         #    and we always keep boundary, and the outermost boundary is
