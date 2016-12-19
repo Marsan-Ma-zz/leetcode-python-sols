@@ -69,6 +69,7 @@ sort-transformed-array
 walls-and-gates
 insert-delete-getrandom-o1-duplicates-allowed
 design-twitter
+data-stream-as-disjoint-intervals
 
 
 ## [Need Careful Implement]
@@ -89,7 +90,7 @@ reverse-nodes-in-k-group
 sort-list
 sum-of-two-integers
 utf-8-validation
-
+concatenated-words
 
 
 ## [Inspiring - Hard]
@@ -139,6 +140,8 @@ ugly-number-ii
 word-break-ii
 word-ladder
 word-search-ii
+contains-duplicate-iii
+all-oone-data-structure
 
 
 ----news for google----

@@ -30,8 +30,88 @@
 # cache.get(3);       // returns 3
 # cache.get(4);       // returns 4
 
+#=======================================
+#   2-way linklist sol, tricky and O(1)
+#=======================================
+from collections import deque
+
+class Node(object):
+    def __init__(self):
+        self.nxt = None
+        self.lst = None
+        self.items = deque([])
+        
+
+class LFUCache(object):
+
+    def __init__(self, capacity):
+        """
+        :type capacity: int
+        """
+        self.cap = capacity
+        self.tbl = {}
+        # 2-way linklist
+        self.head, self.tail = Node(), Node()
+        self.head.nxt, self.tail.lst = self.tail, self.head
+        self.vals = {0: self.head}
+
+    def inckey(self, key, frq):
+        # remove dated
+        if len(self.tbl) > self.cap:
+            node = self.head
+            while node and not node.items:
+                node = node.nxt
+            dkey = node.items.popleft()
+            del self.tbl[dkey]
+            
+        # create new node
+        if frq not in self.vals:
+            last, node = self.tail.lst, Node()
+            last.nxt, self.tail.lst = node, node
+            node.nxt, node.lst = self.tail, last
+            self.vals[frq] = node
+            
+        # update node
+        self.vals[frq].items.append(key)
+        if key in self.vals[frq-1].items:
+            self.vals[frq-1].items.remove(key)
+        
+        
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if not self.cap: return -1
+        sol, frq = self.tbl.get(key, (-1, 0))
+        if sol != -1: 
+            self.tbl[key] = (sol, frq+1)
+            self.inckey(key, frq+1)
+        return sol
 
 
+    def set(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: void
+        """
+        if not self.cap: return
+        frq = self.tbl[key][1] if key in self.tbl else 0
+        self.tbl[key] = (value, frq+1)
+        self.inckey(key, frq+1)
+        
+
+# Your LFUCache object will be instantiated and called as such:
+# obj = LFUCache(capacity)
+# param_1 = obj.get(key)
+# obj.set(key,value)
+
+
+#=======================================
+#   Heap solution, easier but O(log(n))
+#=======================================
 from heapq import *
 
 class LFUCache(object):
