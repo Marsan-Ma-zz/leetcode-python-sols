@@ -15,6 +15,12 @@
 
 
 class Solution(object):
+
+    # [tricky] https://discuss.leetcode.com/topic/19034/1-liner-in-python
+    def spiralOrder(self, matrix):
+        return matrix and list(matrix.pop(0)) + self.spiralOrder(zip(*matrix)[::-1])
+
+
     def spiralOrder(self, matrix):
         """
         :type matrix: List[List[int]]

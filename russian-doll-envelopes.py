@@ -21,8 +21,20 @@ class Solution(object):
         # [Ideas]
         # 1. sort by (width, -height), then traverse this new series
         #    in height since width is already ascending.
-        # 2. it becomes "longest increasing subsequence" problem
-        
+        # 2. it becomes "longest increasing subsequence" problem:
+        #    => doing something like insertion sort, but:
+        #    => instead of insertion, do "replace"
+        #    => use binary search to make searching log(n) per time.
+        #
+        # [10, inf, inf, inf, inf, inf, inf, inf, inf] 
+        # [9, inf, inf, inf, inf, inf, inf, inf, inf] 
+        # [2, inf, inf, inf, inf, inf, inf, inf, inf] 
+        # [2, 5, inf, inf, inf, inf, inf, inf, inf] 
+        # [2, 3, inf, inf, inf, inf, inf, inf, inf] 
+        # [2, 3, 7, inf, inf, inf, inf, inf, inf] 
+        # [2, 3, 7, 101, inf, inf, inf, inf, inf] 
+        # [2, 3, 7, 18, inf, inf, inf, inf, inf] 
+
         envelopes = sorted(envelopes, key=lambda v: (v[0], -v[1]))
         # print(envelopes)
         

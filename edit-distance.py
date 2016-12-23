@@ -11,6 +11,17 @@
 
 
 class Solution(object):
+
+    # [Ideas]
+    #       a    p    p    l     e
+    #   b   1    2    3    4     5
+    #   a   1    2    3    
+    #   n
+    #   a
+    #   n
+    #   a
+
+
     def minDistance(self, word1, word2):
         m, n = map(len, (word1, word2))
         dp = [list(range(n + 1))] + [[i] + [0] * n for i in range(1, m + 1)]

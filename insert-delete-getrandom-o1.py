@@ -36,6 +36,14 @@
 from random import choice
 class RandomizedSet(object):
 
+
+    # [Ideas]
+    # 1. normal list + hashmap, the key is while deleting,
+    #    swap target value with list tail, then pop list. in O(1)
+    #    => don't do nums.remove(t), this cost O(n)
+    #    => don't do nums[:i] + t + nums[i+1:], also cause O(n),
+    #       and generating new list in process.
+    
     def __init__(self):
         """
         Initialize your data structure here.

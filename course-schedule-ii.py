@@ -24,8 +24,28 @@
 # after you finished course 0. So one correct course order is [0,1,2,3]. 
 # Another correct ordering is[0,2,1,3].
 
-
+from collections import *
+        
 class Solution(object):
+
+    # https://discuss.leetcode.com/topic/13991/short-and-simple
+    def findOrder(self, numCourses, prerequisites):
+        pre, suc = defaultdict(int), defaultdict(list)
+        for a, b in prerequisites:
+            pre[a] += 1
+            suc[b].append(a)
+        free = set(range(numCourses)) - set(pre)
+        out = []
+        while free:
+            a = free.pop()
+            out.append(a)
+            for b in suc[a]:
+                pre[b] -= 1
+                pre[b] or free.add(b)   # = "if not pre[b]: free.add(b)"
+        return out * (len(out) == numCourses)
+
+
+
     def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int

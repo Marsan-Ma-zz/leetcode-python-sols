@@ -23,7 +23,7 @@ class Solution(object):
         # [Examples]
         # S = "rabbbit", T = "rabbit"
         #
-        #  i\j r   a   b   b   i   t
+        #  S\T r   a   b   b   i   t
         #   r  1   0   0   0   0   0
         #   a  1   1   0   0   0   0
         #   b  1   1   1   0   0   0

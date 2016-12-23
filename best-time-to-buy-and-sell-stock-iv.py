@@ -26,7 +26,18 @@ class Solution(object):
         #    we have buy[i], sell[i] where i = 1 to k,
         #    means "suppose we are buying/selling i'th time currently"
         #    => it's O(n*k) since one-pass, update k states per step.
-        
+         
+        # [FSM]
+        #-------------------------------------
+        # price    p1       p2             p3                p4
+        # buy_1    -p1  max(-p1, -p2)      ...               ...
+        # sell_1            p2-p1      p3-max(-p1, -p2)      ...
+        # buy_2                         -p1+p2-p3            ...
+        # sell_2                                        -p1+p2-p3+p4
+        # ....
+        #-------------------------------------
+        # O(k*n/2) time and O(k) space
+
         if not prices: return 0
 
         # large k, fallback

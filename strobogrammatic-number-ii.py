@@ -14,6 +14,16 @@
 from math import ceil, floor
 
 class Solution(object):
+
+    # https://discuss.leetcode.com/topic/20750/3-lines-ruby-5-lines-python
+    def findStrobogrammatic(self, n):
+        nums = list('018') if n%2 else ['']
+        while n > 1:
+            n -= 2
+            nums = [a + num + b for a, b in '00 11 88 69 96'.split()[n<2:] for num in nums]
+        return nums
+
+
     def findStrobogrammatic(self, n):
         """
         :type n: int

@@ -17,12 +17,13 @@ class Solution:
         if node:
             return self.cloneNode(node)
     
+
     def cloneNode(self, node):
         if node.label in self.seen:
             return self.seen[node.label]
         clonedNode = UndirectedGraphNode(node.label)
-        self.seen[node.label] = clonedNode
         clonedNode.neighbors = [self.cloneNode(n) for n in node.neighbors]
+        self.seen[node.label] = clonedNode
         return clonedNode
         
 # class Solution(object):

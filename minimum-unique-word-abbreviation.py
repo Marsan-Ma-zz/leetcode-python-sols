@@ -58,7 +58,7 @@ class Solution(object):
         if not diffs:
             return str(m)
     
-        # collect candidates separate target from dict
+        # collect candidates separate target from dict O(2**m)
         cands = [i for i in range(2**m) if all(d & i for d in diffs)]
         
         # calculate candidate saving most bits

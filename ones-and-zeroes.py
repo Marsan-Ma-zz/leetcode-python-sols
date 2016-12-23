@@ -27,6 +27,34 @@
 
 from collections import Counter, defaultdict
 class Solution(object):
+
+    # https://discuss.leetcode.com/topic/71587/0-1-knapsack-in-python
+    # 1. [transition func]: 
+    #   dp(k, x, y) = max(dp(k-1, x-z, y-o) + 1, dp(k-1, x, y))   
+    #   where z is zeroes in strs[k], o is ones in strs[k]
+    #   dp(len(strs), M, N) is the answer we are looking for
+    # 
+    # 2. dp(k, x, y) is the maximum strs we can include when we have x zeros, 
+    #    y ones and only the first k strs are considered.
+    # 3. I first implemented a dfs + memoization, which gets MLE, 
+    #    so I created a bottom up style dp.
+    #    With bottom up, we can use something called "rolling array" to optimize 
+    #    space complexity from O(KMN) to O(MN)
+
+    def findMaxForm(self, strs, m, n):
+        dp = [[0] * (n+1) for _ in range(m+1)]
+        
+        def count(s):
+            return sum(1 for c in s if c == '0'), sum(1 for c in s if c == '1')
+        
+        for z, o in [count(s) for s in strs]:
+            for x in range(m, -1, -1):
+                for y in range(n, -1, -1):
+                    if x >= z and y >= o:
+                        dp[x][y] = max(1 + dp[x-z][y-o], dp[x][y])
+        return dp[m][n]
+
+
     def findMaxForm(self, strs, m, n):
         """
         :type strs: List[str]
