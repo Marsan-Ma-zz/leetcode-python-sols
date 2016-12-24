@@ -34,6 +34,11 @@ unique-binary-search-trees-ii
 valid-parentheses
 verify-preorder-serialization-of-a-binary-tree
 word-break
+find-all-duplicates-in-an-array
+add-two-numbers-ii
+binary-tree-upside-down
+minimum-number-of-arrows-to-burst-balloons
+reconstruct-original-digits-from-english
 
 
 ## [Inspiring - Normal]
