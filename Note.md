@@ -39,6 +39,9 @@ add-two-numbers-ii
 binary-tree-upside-down
 minimum-number-of-arrows-to-burst-balloons
 reconstruct-original-digits-from-english
+4sum-ii
+serialize-and-deserialize-bst
+non-overlapping-intervals
 
 
 ## [Inspiring - Normal]
@@ -77,6 +80,11 @@ walls-and-gates
 shortest-distance-from-all-buildings
 shortest-palindrome
 remove-invalid-parentheses
+house-robber-iii
+different-ways-to-add-parentheses
+longest-repeating-character-replacement
+lexicographical-numbers
+
 
 
 ## [Need Careful Implement]
@@ -150,6 +158,8 @@ word-break-ii
 word-ladder
 word-ladder-ii
 word-search-ii
+verify-preorder-sequence-in-binary-search-tree
+
 
 ----news for google----
 optimal-account-balancing.py  (no good sol yet)
