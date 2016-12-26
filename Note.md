@@ -42,6 +42,12 @@ reconstruct-original-digits-from-english
 4sum-ii
 serialize-and-deserialize-bst
 non-overlapping-intervals
+longest-substring-with-at-least-k-repeating-characters
+delete-node-in-a-bst
+super-pow
+best-meeting-point
+convert-sorted-list-to-binary-search-tree
+
 
 
 ## [Inspiring - Normal]
@@ -84,7 +90,8 @@ house-robber-iii
 different-ways-to-add-parentheses
 longest-repeating-character-replacement
 lexicographical-numbers
-
+elimination-game
+wiggle-subsequence
 
 
 ## [Need Careful Implement]
@@ -106,6 +113,7 @@ reverse-nodes-in-k-group
 sort-list
 sum-of-two-integers
 utf-8-validation
+combination-sum
 
 
 ## [Inspiring - Hard]
@@ -159,6 +167,8 @@ word-ladder
 word-ladder-ii
 word-search-ii
 verify-preorder-sequence-in-binary-search-tree
+partition-equal-subset-sum
+search-in-rotated-sorted-array-ii
 
 
 ----news for google----
