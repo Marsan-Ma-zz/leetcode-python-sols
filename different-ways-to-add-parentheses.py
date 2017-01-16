@@ -32,6 +32,9 @@ class Solution(object):
         :rtype: List[int]
         """
         
+        # [Ideas]
+        # 1. use any symbol to divide into two sub-problem,
+        #    then recursive.
         nums, j = [], 0
         input += ' ' # dummy for loop convenience
         

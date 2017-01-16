@@ -40,6 +40,7 @@ def countRangeSum(self, nums, lower, upper):
         Sum[i + 1] = Sum[i] + nums[i]
     sortSum, res = sorted(Sum), 0
     for sum_j in Sum:
+        # since "lower <= sum_j - sum_i <= upper"
         sum_i_count = count(bisect.bisect_right(sortSum, sum_j - lower)) - count(bisect.bisect_left(sortSum, sum_j - upper))
         res += sum_i_count
         update(bisect.bisect_left(sortSum, sum_j) + 1)

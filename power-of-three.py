@@ -13,3 +13,12 @@ class Solution(object):
         :rtype: bool
         """
         return (n > 0) and (1162261467 % n == 0)
+
+
+    # recursive sol
+    def isPowerOfThree(n):
+        return n>0 && (n==1 || (n%3==0 && isPowerOfThree(n/3)))
+
+    # log sol
+    def isPowerOfThree(n):
+        return (math.log10(n) / math.log10(3)) % 1 == 0

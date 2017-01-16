@@ -44,7 +44,7 @@ class Solution(object):
         # 2. if no bounce => at least 2 => but if all numbers equal, only 1
         #    => thus 'if len(nums) < 2: return len(nums)''
         #    => and 'if sum(vecs) == 0: return 1'
-        # 2. prove: 
+        # 3. prove: 
         # https://discuss.leetcode.com/topic/51807/3-lines-o-n-python-with-explanation-proof
         
         if len(nums) < 2: return len(nums)

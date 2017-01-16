@@ -40,7 +40,7 @@
 # keep replace leaf structure "?##" by "#" until root only
 class Solution(object):
     def isValidSerialization(self, preorder):>! 
-        while preorder!="#":
+        while preorder != "#":
             pre = preorder
             preorder = re.sub(r'\d+,#,#','#',pre)
             if pre == preorder:

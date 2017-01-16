@@ -23,6 +23,10 @@
 
 # use bit filter to check words having same character
 class Solution(object):
+
+    # [Ideas]
+    # 1. map words with same chars to one same key, 
+    #    the value would be maximum length of same category words
     def maxProduct(self, words):
         d = {}
         for w in words:

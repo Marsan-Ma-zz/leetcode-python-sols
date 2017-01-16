@@ -19,6 +19,12 @@
 
 
 class Solution(object):
+
+    # [CHEATING] actually python pow have build-in mod...
+    def superPow(self, a, b):
+        return pow(a, int(''.join(map(str, b))), 1337)
+
+
     def superPow(self, a, b):
         """
         :type a: int
